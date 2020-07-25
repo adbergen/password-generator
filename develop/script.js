@@ -10,16 +10,16 @@ var generateBtn = document.querySelector("#generate");
 // ***********
 
 // change the all varialbe names, comments, etc.
-var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
-var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialChars = "$#@!~^&*()_+[]{}"; // might need more
-var numberStr = "0123456789";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var specialCase = "@%+\/'!#$^?:,(){}[]~-_."; // might need more
+var numberCase = "0123456789";
 
 // you could change varialbes into hard coded arrays such as ['a', 'b', ... ]
-var lowerCaseArr = "abcdefghijklmnopqrstuvwxyz".split("");
-var uppderCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var specialArr = "$#@!~^&*()_+[]{}".split(""); // could need modification
-var numberArr = "0123456789".split("");
+var lowerCaseSplit = "abcdefghijklmnopqrstuvwxyz".split("");
+var upperCaseSplit = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var specialCaseSplit = "@%+\/'!#$^?:,(){}[]~-_.".split(""); // could need modification
+var numberCaseSplit = "0123456789".split("");
 
 // variables for store user's input
 var confirmNumbers = false;
@@ -32,10 +32,10 @@ var minLen = 8;
 var _password = "";
 
 // log to see the data
-console.log(lowerCaseArr);
-console.log(uppderCaseArr);
-console.log(specialArr);
-console.log(numberArr);
+console.log(lowerCaseSplit);
+console.log(upperCaseSplit);
+console.log(specialCaseSplit);
+console.log(numberCaseSplit);
 
 // **************************
 // USER INPUT - function ()?
@@ -64,26 +64,26 @@ confirmSpecial = confirm("Do you want special characters?");
 // Include in password at least one letter with the user's choices of numbers, special chars, uppercase and/or lowercase chars
 // to meet user's requiremence
 if (confirmNumbers) {
-  var index = Math.floor(Math.random() * numberArr.length);
-  _password += numberArr[index];
+  var index = Math.floor(Math.random() * numberCaseSplit.length);
+  _password += numberCaseSplit[index];
 }
 console.log(_password);
 
 if (confirmUpper) {
-  var index = Math.floor(Math.random() * uppderCaseArr.length);
-  _password += uppderCaseArr[index];
+  var index = Math.floor(Math.random() * upperCaseSplit.length);
+  _password += upperCaseSplit[index];
 }
 console.log(_password);
 
 if (confirmLower) {
-  var index = Math.floor(Math.random() * lowerCaseArr.length);
-  _password += lowerCaseArr[index];
+  var index = Math.floor(Math.random() * lowerCaseSplit.length);
+  _password += lowerCaseSplit[index];
 }
 console.log(_password);
 
 if (confirmSpecial) {
-  var index = Math.floor(Math.random() * specialArr.length);
-  _password += specialArr[index];
+  var index = Math.floor(Math.random() * specialCaseSplit.length);
+  _password += specialCaseSplit[index];
 }
 console.log(_password);
 
@@ -96,16 +96,16 @@ function generatePassword() {
 
   // after implementing the required chars, create a string candidates of strings for random selections
   if (confirmNumbers) {
-    allChosenStr += numberStr;
+    allChosenStr += numberCase;
   }
   if (confirmUpper) {
-    allChosenStr += upperCaseChars;
+    allChosenStr += upperCase;
   }
   if (confirmLower) {
-    allChosenStr += lowerCaseChars;
+    allChosenStr += lowerCase;
   }
   if (confirmSpecial) {
-    allChosenStr += specialChars;
+    allChosenStr += specialCase;
   }
   console.log(allChosenStr);
 
