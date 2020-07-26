@@ -15,13 +15,13 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specialCase = "@%+\/'!#$^?:,(){}[]~-_.";
 var numberCase = "0123456789";
 
-// you could change varialbes into hard coded arrays such as ['a', 'b', ... ]
+// possible password generated characters with split case
 var lowerCaseSplit = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperCaseSplit = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialCaseSplit = "@%+\/'!#$^?:,(){}[]~-_.".split("");
 var numberCaseSplit = "0123456789".split("");
 
-// variables for store user's input
+// variables for storing user's input
 var confirmNumbers = false;
 var confirmUpper = false;
 var confirmLower = false;
@@ -38,7 +38,7 @@ console.log(specialCaseSplit);
 console.log(numberCaseSplit);
 
 // **************************
-// USER INPUT - function ()?
+// USER INPUT - function ()
 // **************************
 
 passwordLength = prompt("Enter the length of your password");
