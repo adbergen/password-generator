@@ -9,16 +9,16 @@ var generateBtn = document.querySelector("#generate");
 // DATA
 // ***********
 
-// change the all varialbe names, comments, etc.
+// possible password generated characters
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialCase = "@%+\/'!#$^?:,(){}[]~-_."; // might need more
+var specialCase = "@%+\/'!#$^?:,(){}[]~-_.";
 var numberCase = "0123456789";
 
 // you could change varialbes into hard coded arrays such as ['a', 'b', ... ]
 var lowerCaseSplit = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperCaseSplit = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var specialCaseSplit = "@%+\/'!#$^?:,(){}[]~-_.".split(""); // could need modification
+var specialCaseSplit = "@%+\/'!#$^?:,(){}[]~-_.".split("");
 var numberCaseSplit = "0123456789".split("");
 
 // variables for store user's input
@@ -26,9 +26,9 @@ var confirmNumbers = false;
 var confirmUpper = false;
 var confirmLower = false;
 var confirmSpecial = false;
-var lenPwdChosen = 0;
+var passwordLength = 0;
 
-var minLen = 8;
+var minLength = 8;
 var _password = "";
 
 // log to see the data
@@ -41,10 +41,10 @@ console.log(numberCaseSplit);
 // USER INPUT - function ()?
 // **************************
 
-lenPwdChosen = prompt("Enter the length of your password");
-while (lenPwdChosen < minLen) {
+passwordLength = prompt("Enter the length of your password");
+while (passwordLength < minLength) {
   alert("Length of password has to be greater than 6");
-  lenPwdChosen = prompt("Enter the length of your password");
+  passwordLength = prompt("Enter the length of your password");
 }
 
 confirmNumbers = confirm("Do you want numbers in your password?");
@@ -89,7 +89,7 @@ console.log(_password);
 
 // Function:
 function generatePassword() {
-  var remaining = lenPwdChosen - _password.length;
+  var remaining = passwordLength - _password.length;
   var allChosenStr = "";
 
   // you could call confirm function here
