@@ -25,7 +25,7 @@ This is a password generator application.</p>
   </h4>
 </div>
 
-![Screenshot of application demo](assets/images/demo.png)
+![Screenshot of application demo](assets/demo.png)
 
 <hr>
 
