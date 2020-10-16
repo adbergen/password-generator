@@ -12,13 +12,13 @@ var generateBtn = document.querySelector("#generate");
 // possible password generated characters
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialCase = "@%+\/'!#$^?:,(){}[]~-_.";
+var specialCase = "@%+/'!#$^?:,(){}[]~-_.";
 var numberCase = "0123456789";
 
 // possible password generated characters with split case
 var lowerCaseSplit = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperCaseSplit = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var specialCaseSplit = "@%+\/'!#$^?:,(){}[]~-_.".split("");
+var specialCaseSplit = "@%+/'!#$^?:,(){}[]~-_.".split("");
 var numberCaseSplit = "0123456789".split("");
 
 // variables for storing user's input
@@ -28,7 +28,7 @@ var confirmLower = false;
 var confirmSpecial = false;
 var passwordLength = 0;
 
-var minLength = 8;
+var minLength = 7;
 var _password = "";
 
 // log to see the data
@@ -113,18 +113,17 @@ function generatePassword() {
     var index = Math.floor(Math.random() * allChosenStr.length);
     _password += allChosenStr[index]; // append to the existing password
   }
-  console.log('Password before randomized order', _password);
+  console.log("Password before randomized order", _password);
 
   // Randomize the order of chars in the password - can be skipped or add your own code
   var pwdArr = _password.split("");
   var randomOrdered = [];
   randomOrdered.push(pwdArr[pwdArr.length - 1]);
   randomOrdered.push(pwdArr[pwdArr.length - 2]);
-  for (var i = 0; i < (pwdArr.length - 2); i++) {
+  for (var i = 0; i < pwdArr.length - 2; i++) {
     randomOrdered.push(pwdArr[i]);
-  };
+  }
   _password = randomOrdered.join("");
-
 
   console.log("Final password", _password);
   return _password;
@@ -134,14 +133,12 @@ function generatePassword() {
 function writePassword() {
   // could call your functions here below
 
-
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-Collapse
+Collapse;

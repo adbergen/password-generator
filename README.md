@@ -1,60 +1,71 @@
-# Password Generator
+<h1 align="center">
+Password Generator
+</h1>
+<h4 align="center" style="margin-bottom:10px">Be sure to star my configuration repo so you can keep up to date on any daily progress!</h4>
+<div align="center">
+  <h4>
+    </a>
+    <a href="https://github.com/adbergen/password-generator/stargazers"><img src="https://img.shields.io/github/stars/adbergen/password-generator.svg?style=plasticr"/></a>
+    <a href="https://github.com/adbergen/password-generator/commits/master"><img src="https://img.shields.io/github/last-commit/adbergen/password-generator.svg?style=plasticr"/></a>
+        <a href="https://github.com/adbergen/password-generator/commits/master"><img src="https://img.shields.io/github/commit-activity/y/adbergen/password-generator.svg?style=plasticr"/></a>
+</h4>
+<br>
+</div>
+<p align="center"><font size="3">
+This is a password generator application.</p>
+<div align="center"><a name="menu"></a>
+  <h4>
+    <a href="https://github.com/adbergen/password-generator">
+      Github Repository
+    </a>
+<span> | </span>
+<a href="https://adbergen.github.io/password-generator/">
+      Github Pages
+    </a>
+  </h4>
+</div>
 
-- This is a password generator application that generates a random password based on the user-selected criteria. This application will run in the browser with a clean and polished user interface. This application is responsive, allowing it to adapt to multiple screen sizes, including mobile. An HTML validation service was used to ensure the page has valid HTML.
+![Screenshot of application demo](assets/images/demo.png)
 
----
+<hr>
 
-## File Contents
+## Table of Contents
 
-```
-- README.md (this file)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
 
-- style.css
+<hr>
 
-- index.html
+## Installation
 
-- script.js
-```
+- Open the index.html file in your web browser
 
----
+<hr>
 
-## Languages Used
+## Usage
 
-```
-- HTML/HTML5 is used for structure of information for webpage
+- This application generates a random password based on the user-selected criteria. This application will run in the browser with a clean and polished user interface. This application is responsive, allowing it to adapt to multiple screen sizes, including mobile. An HTML validation service was used to ensure the page has valid HTML.
 
-- CSS and Bootstrap are used for styling of the website
+<hr>
 
-- Javascript is used for powering the password generator
-```
+## Technologies
 
----
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bootstrap</li>
+<li>Javascript</li>
+<li>GitHub</li>
+</ul>
 
-## Requirements Met
+<hr>
 
-```
-- Functional, deployed application
+## Contributing
 
-- GitHub repository with README describing the project
+- Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-- When button is clicked a password is generated based on the user's given criteria
+- Contributors: Anthony Bergen
 
-- User is presented with a series of prompts for password criteria
-
-- User is prompted to select password length with a minimum of 8 and maximum of 128 characters
-
-- User can choose character types to include in the password that include lowercase, uppercase, numeric, and/or special characters
-
-- User input is validated and at least one character type should be selected
-
-- Password is generated that matches the criteria once all prompts are answered and button is clicked
-
-- Password is displayed on the page
-
-- Semantic html used
-
-- Each page has valid and correct HTML. (use a validation service)
-```
-
----
----
+<hr><hr>
